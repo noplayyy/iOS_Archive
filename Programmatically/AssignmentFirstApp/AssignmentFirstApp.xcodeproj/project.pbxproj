@@ -13,6 +13,7 @@
 		AA881E0B26D3800B00C04028 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA881E0A26D3800B00C04028 /* Assets.xcassets */; };
 		AA881E0E26D3800B00C04028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA881E0C26D3800B00C04028 /* LaunchScreen.storyboard */; };
 		AA881E1626D380DE00C04028 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA881E1526D380DE00C04028 /* LoginViewController.swift */; };
+		AA881E1826D3BEDA00C04028 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA881E1726D3BEDA00C04028 /* SignUpViewController.swift */; };
 		C65B1329F62CF59F42DF29F2 /* Pods_AssignmentFirstApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567DF180F8D23FF9295BB6A3 /* Pods_AssignmentFirstApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		AA881E0D26D3800B00C04028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA881E0F26D3800B00C04028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA881E1526D380DE00C04028 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AA881E1726D3BEDA00C04028 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BBC423B7D4E7A9BFE0FB56A3 /* Pods-AssignmentFirstApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssignmentFirstApp.debug.xcconfig"; path = "Target Support Files/Pods-AssignmentFirstApp/Pods-AssignmentFirstApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				AA881E0C26D3800B00C04028 /* LaunchScreen.storyboard */,
 				AA881E0F26D3800B00C04028 /* Info.plist */,
 				AA881E1526D380DE00C04028 /* LoginViewController.swift */,
+				AA881E1726D3BEDA00C04028 /* SignUpViewController.swift */,
 			);
 			path = AssignmentFirstApp;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				AA881E1626D380DE00C04028 /* LoginViewController.swift in Sources */,
 				AA881E0226D3800800C04028 /* AppDelegate.swift in Sources */,
+				AA881E1826D3BEDA00C04028 /* SignUpViewController.swift in Sources */,
 				AA881E0426D3800800C04028 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
