@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AA881E0226D3800800C04028 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA881E0126D3800800C04028 /* AppDelegate.swift */; };
 		AA881E0426D3800800C04028 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA881E0326D3800800C04028 /* SceneDelegate.swift */; };
-		AA881E0626D3800800C04028 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA881E0526D3800800C04028 /* ViewController.swift */; };
 		AA881E0926D3800800C04028 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA881E0726D3800800C04028 /* Main.storyboard */; };
 		AA881E0B26D3800B00C04028 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA881E0A26D3800B00C04028 /* Assets.xcassets */; };
 		AA881E0E26D3800B00C04028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA881E0C26D3800B00C04028 /* LaunchScreen.storyboard */; };
+		AA881E1626D380DE00C04028 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA881E1526D380DE00C04028 /* LoginViewController.swift */; };
 		C65B1329F62CF59F42DF29F2 /* Pods_AssignmentFirstApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567DF180F8D23FF9295BB6A3 /* Pods_AssignmentFirstApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +22,11 @@
 		AA881DFE26D3800800C04028 /* AssignmentFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA881E0126D3800800C04028 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA881E0326D3800800C04028 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA881E0526D3800800C04028 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA881E0826D3800800C04028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA881E0A26D3800B00C04028 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA881E0D26D3800B00C04028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA881E0F26D3800B00C04028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA881E1526D380DE00C04028 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BBC423B7D4E7A9BFE0FB56A3 /* Pods-AssignmentFirstApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssignmentFirstApp.debug.xcconfig"; path = "Target Support Files/Pods-AssignmentFirstApp/Pods-AssignmentFirstApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +56,6 @@
 				BBC423B7D4E7A9BFE0FB56A3 /* Pods-AssignmentFirstApp.debug.xcconfig */,
 				86D34C7900CB7CA4BF4820C1 /* Pods-AssignmentFirstApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,11 +82,11 @@
 			children = (
 				AA881E0126D3800800C04028 /* AppDelegate.swift */,
 				AA881E0326D3800800C04028 /* SceneDelegate.swift */,
-				AA881E0526D3800800C04028 /* ViewController.swift */,
 				AA881E0726D3800800C04028 /* Main.storyboard */,
 				AA881E0A26D3800B00C04028 /* Assets.xcassets */,
 				AA881E0C26D3800B00C04028 /* LaunchScreen.storyboard */,
 				AA881E0F26D3800B00C04028 /* Info.plist */,
+				AA881E1526D380DE00C04028 /* LoginViewController.swift */,
 			);
 			path = AssignmentFirstApp;
 			sourceTree = "<group>";
@@ -206,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA881E0626D3800800C04028 /* ViewController.swift in Sources */,
+				AA881E1626D380DE00C04028 /* LoginViewController.swift in Sources */,
 				AA881E0226D3800800C04028 /* AppDelegate.swift in Sources */,
 				AA881E0426D3800800C04028 /* SceneDelegate.swift in Sources */,
 			);
