@@ -63,6 +63,8 @@ class LoginViewController: UIViewController {
         $0.setTitle("로그인", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: self.view.frame.height/62.46)
+        
+        $0.addTarget(self, action: #selector(onTapLogin), for: .touchUpInside)
     }
     
     lazy var forgotPWBtn = UIButton().then {
@@ -75,6 +77,8 @@ class LoginViewController: UIViewController {
         $0.setTitle("아직 회원이 아니신가요?", for: .normal)
         $0.setTitleColor(.rgb(red: 255, green: 255, blue: 255), for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: self.view.frame.height/62.46)
+        
+        $0.addTarget(self, action: #selector(onTapNotUser), for: .touchUpInside)
     }
     //MARK: - Lifecycle
     
@@ -84,6 +88,17 @@ class LoginViewController: UIViewController {
     }
         
     //MARK: - Selectors
+    
+    @objc
+    func onTapNotUser(){
+        let controller = SignUpViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc
+    func onTapLogin(){
+        print("DEBUG : Click bottom login button Button")
+    }
     
     //MARK: - Helpers
     
@@ -176,6 +191,8 @@ class LoginViewController: UIViewController {
         notUser.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.top.equalTo(containerView).offset(self.view.frame.height/1.42)
+            make.height.equalToSuperview().dividedBy(50.75)
+            make.width.equalToSuperview().dividedBy(2.98)
         }
     }
 }
