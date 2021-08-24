@@ -91,12 +91,16 @@ class SignUpViewController: UIViewController {
         $0.setTitle("회원가입", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: self.view.frame.height/62.46)
+        
+        $0.addTarget(self, action: #selector(onTapSignUp), for: .touchUpInside)
     }
     
     lazy var alreadyUser = UIButton().then{
         $0.setTitle("이미 회원이신가요?", for: .normal)
         $0.setTitleColor(.rgb(red: 255, green: 255, blue: 255), for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: self.view.frame.height/62.46)
+        
+        $0.addTarget(self, action: #selector(onTapalreadyUser), for: .touchUpInside)
     }
     //MARK: - Lifecycle
     
@@ -106,6 +110,17 @@ class SignUpViewController: UIViewController {
     }
         
     //MARK: - Selectors
+    
+    @objc
+    func onTapalreadyUser(){
+        let controller = LoginViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc
+    func onTapSignUp(){
+        print("DEBUG : Click bottom signup button Button")
+    }
     
     //MARK: - Helpers
     
@@ -222,6 +237,8 @@ class SignUpViewController: UIViewController {
         alreadyUser.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.top.equalTo(containerView).offset(self.view.frame.height/1.42)
+            make.height.equalToSuperview().dividedBy(50.75)
+            make.width.equalToSuperview().dividedBy(3.75)
         }
     }
 }
