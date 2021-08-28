@@ -36,11 +36,23 @@ class ViewController: UIViewController {
         })
     }
     
+    func requestMicrophonePermission(){
+        AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
+            if granted {
+                print("Mic: 권한 허용")
+            } else {
+                print("Mic: 권한 거부")
+            }
+        })
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         requestCameraPermission()
         requestGalleryPermission()
+        requestMicrophonePermission()
     }
 
 
