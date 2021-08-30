@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		AA2D93A926DCD0A5006FDE74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2D93A726DCD0A5006FDE74 /* Main.storyboard */; };
 		AA2D93AB26DCD0A7006FDE74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2D93AA26DCD0A7006FDE74 /* Assets.xcassets */; };
 		AA2D93AE26DCD0A7006FDE74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2D93AC26DCD0A7006FDE74 /* LaunchScreen.storyboard */; };
+		AA2D93B726DCD297006FDE74 /* GradeDropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D93B626DCD297006FDE74 /* GradeDropDownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AA2D93AA26DCD0A7006FDE74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA2D93AD26DCD0A7006FDE74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA2D93AF26DCD0A7006FDE74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA2D93B626DCD297006FDE74 /* GradeDropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDropDownView.swift; sourceTree = "<group>"; };
 		B5778E47E78412DF03F247CF /* Pods_DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +50,6 @@
 				AA271E200CFAF918CF4DCE5B /* Pods-DropDown.debug.xcconfig */,
 				8B0CDF7E054D9EF5E6860866 /* Pods-DropDown.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +82,7 @@
 		AA2D93A026DCD0A5006FDE74 /* DropDown */ = {
 			isa = PBXGroup;
 			children = (
+				AA2D93B526DCD1DC006FDE74 /* Views */,
 				AA2D93A126DCD0A5006FDE74 /* AppDelegate.swift */,
 				AA2D93A326DCD0A5006FDE74 /* SceneDelegate.swift */,
 				AA2D93A526DCD0A5006FDE74 /* ViewController.swift */,
@@ -90,6 +92,14 @@
 				AA2D93AF26DCD0A7006FDE74 /* Info.plist */,
 			);
 			path = DropDown;
+			sourceTree = "<group>";
+		};
+		AA2D93B526DCD1DC006FDE74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA2D93B626DCD297006FDE74 /* GradeDropDownView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA2D93A626DCD0A5006FDE74 /* ViewController.swift in Sources */,
+				AA2D93B726DCD297006FDE74 /* GradeDropDownView.swift in Sources */,
 				AA2D93A226DCD0A5006FDE74 /* AppDelegate.swift in Sources */,
 				AA2D93A426DCD0A5006FDE74 /* SceneDelegate.swift in Sources */,
 			);
