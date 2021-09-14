@@ -42,11 +42,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    @objc
-    func selectNum(_sender : UIButton){
-        
-    }
-    
     func collectionViewSetting(){
         numberCollectionView.register(cellView.self, forCellWithReuseIdentifier: cellView.identifier)
 

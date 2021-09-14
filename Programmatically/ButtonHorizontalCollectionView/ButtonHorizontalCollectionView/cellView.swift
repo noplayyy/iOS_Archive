@@ -21,6 +21,16 @@ class cellView: UICollectionViewCell {
         $0.setTitleColor(.rgb(red: 108, green: 108, blue: 108), for: .normal)
     }
     
+    override var isSelected: Bool {
+      didSet {
+        if isSelected {
+            numButton.setTitleColor(.rgb(red: 255, green: 174, blue: 185), for: .normal)
+        } else {
+            numButton.setTitleColor(.rgb(red: 108, green: 108, blue: 108), for: .normal)
+        }
+      }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
