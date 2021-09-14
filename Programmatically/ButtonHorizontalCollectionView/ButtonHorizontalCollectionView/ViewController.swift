@@ -10,9 +10,6 @@ import SnapKit
 import Then
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    lazy var backView = UIView().then {
-        $0.backgroundColor = .rgb(red: 255, green: 255, blue: 255)
-    }
     
     lazy var numList: [String] = ["1번", "2번", "3번", "4번", "5번", "6번", "7번", "8번", "9번", "10번", "11번", "12번", "13번", "14번", "15번", "16번", "17번", "18번", "19번", "20번"]
     
@@ -43,6 +40,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             make.width.equalToSuperview().dividedBy(1.5)
             make.height.equalToSuperview().dividedBy(21.37)
         }
+    }
+    
+    @objc
+    func selectNum(_sender : UIButton){
+        
     }
     
     func collectionViewSetting(){
