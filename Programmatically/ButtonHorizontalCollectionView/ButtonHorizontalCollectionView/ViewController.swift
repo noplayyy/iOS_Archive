@@ -9,10 +9,20 @@ import UIKit
 import SnapKit
 import Then
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     lazy var backView = UIView().then {
         $0.backgroundColor = .rgb(red: 255, green: 255, blue: 255)
+    }
+    
+    lazy var numList: [String] = ["1번", "2번", "3번", "4번", "5번", "6번", "7번", "8번", "9번", "10번", "11번", "12번", "13번", "14번", "15번", "16번", "17번", "18번", "19번", "20번"]
+    
+    lazy var numberCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        $0.backgroundColor = .white
+        $0.contentInset = UIEdgeInsets.init(top: 0, left: 17, bottom: 0, right: 0)
+        $0.showsHorizontalScrollIndicator = false
+        $0.collectionViewLayout = layout
     }
     
     override func viewDidLoad() {
@@ -21,21 +31,53 @@ class ViewController: UIViewController {
     }
     
     func configureUI(){
+        collectionViewSetting()
         view.backgroundColor = .rgb(red: 255, green: 243, blue: 243)
-    
-        view.addSubview(backView)
-        backView.layer.cornerRadius = self.view.frame.width/46.88
+
+        numberCollectionView.layer.cornerRadius = self.view.frame.width/46.88
         
-        backView.snp.makeConstraints { make in
+        view.addSubview(numberCollectionView)
+        numberCollectionView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(self.view.frame.height/1.72)
             make.width.equalToSuperview().dividedBy(1.5)
             make.height.equalToSuperview().dividedBy(21.37)
         }
     }
+    
+    func collectionViewSetting(){
+        numberCollectionView.register(cellView.self, forCellWithReuseIdentifier: cellView.identifier)
 
+        numberCollectionView.delegate = self
+        numberCollectionView.dataSource = self
+    }
 
-}
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        numList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
+        cellView.identifier, for: indexPath) as? cellView else {
+                    return UICollectionViewCell()
+            }
+
+        cell.numButton.setTitle(numList[indexPath.row], for: .normal)
+        cell.backgroundColor = .clear
+        return cell
+        }
+    }
+
+    //MARK: collectionView - cell 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+
+    //MARK: collectionView - left Padding
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+       return UIEdgeInsets(top: 0, left: 34, bottom: 0, right: 0)
+    }
+
 // MARK: - UIColor Extension
 extension UIColor{
     static func rgb(red: CGFloat ,green: CGFloat,blue:CGFloat) -> UIColor{
