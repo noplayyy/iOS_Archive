@@ -13,9 +13,11 @@
 		AA478B6B26F07EAF009C628B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA478B6926F07EAF009C628B /* Main.storyboard */; };
 		AA478B6D26F07EB2009C628B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA478B6C26F07EB2009C628B /* Assets.xcassets */; };
 		AA478B7026F07EB2009C628B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA478B6E26F07EB2009C628B /* LaunchScreen.storyboard */; };
+		B0AD16F9EEC6B171C0E2F3AF /* Pods_ButtonHorizontalCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E74B4C4303F3A28198B992C /* Pods_ButtonHorizontalCollectionView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E74B4C4303F3A28198B992C /* Pods_ButtonHorizontalCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButtonHorizontalCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA478B6026F07EAF009C628B /* ButtonHorizontalCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonHorizontalCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA478B6326F07EAF009C628B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA478B6526F07EAF009C628B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		AA478B6C26F07EB2009C628B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA478B6F26F07EB2009C628B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA478B7126F07EB2009C628B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E868D1D9B17542DE41277E34 /* Pods-ButtonHorizontalCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButtonHorizontalCollectionView.debug.xcconfig"; path = "Target Support Files/Pods-ButtonHorizontalCollectionView/Pods-ButtonHorizontalCollectionView.debug.xcconfig"; sourceTree = "<group>"; };
+		EDFC2B2969715625FAE6C5EF /* Pods-ButtonHorizontalCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButtonHorizontalCollectionView.release.xcconfig"; path = "Target Support Files/Pods-ButtonHorizontalCollectionView/Pods-ButtonHorizontalCollectionView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AD16F9EEC6B171C0E2F3AF /* Pods_ButtonHorizontalCollectionView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37804716CD0C4875CED36C13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E868D1D9B17542DE41277E34 /* Pods-ButtonHorizontalCollectionView.debug.xcconfig */,
+				EDFC2B2969715625FAE6C5EF /* Pods-ButtonHorizontalCollectionView.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		997EC8C36B392D006A2BA3F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E74B4C4303F3A28198B992C /* Pods_ButtonHorizontalCollectionView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA478B5726F07EAF009C628B = {
 			isa = PBXGroup;
 			children = (
 				AA478B6226F07EAF009C628B /* ButtonHorizontalCollectionView */,
 				AA478B6126F07EAF009C628B /* Products */,
+				37804716CD0C4875CED36C13 /* Pods */,
+				997EC8C36B392D006A2BA3F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA478B7426F07EB2009C628B /* Build configuration list for PBXNativeTarget "ButtonHorizontalCollectionView" */;
 			buildPhases = (
+				BA44861B69085DE8A19DA71C /* [CP] Check Pods Manifest.lock */,
 				AA478B5C26F07EAF009C628B /* Sources */,
 				AA478B5D26F07EAF009C628B /* Frameworks */,
 				AA478B5E26F07EAF009C628B /* Resources */,
+				766643C9922B034CAEBA4127 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		766643C9922B034CAEBA4127 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ButtonHorizontalCollectionView/Pods-ButtonHorizontalCollectionView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ButtonHorizontalCollectionView/Pods-ButtonHorizontalCollectionView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ButtonHorizontalCollectionView/Pods-ButtonHorizontalCollectionView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA44861B69085DE8A19DA71C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ButtonHorizontalCollectionView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA478B5C26F07EAF009C628B /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		AA478B7526F07EB2009C628B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E868D1D9B17542DE41277E34 /* Pods-ButtonHorizontalCollectionView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		AA478B7626F07EB2009C628B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDFC2B2969715625FAE6C5EF /* Pods-ButtonHorizontalCollectionView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
