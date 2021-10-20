@@ -156,12 +156,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        tableViewSetting()
+        addView()
+        location()
+    }
+    
+//MARK: - tableViewSetting
+    private func tableViewSetting(){
         tableView.dataSource = self
         tableView.delegate = self
                         
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
-        addView()
-        location()
     }
     
 //MARK: - addView
