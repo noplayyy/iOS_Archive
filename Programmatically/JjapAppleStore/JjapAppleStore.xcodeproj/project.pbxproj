@@ -15,6 +15,7 @@
 		AA00AEE72720648D00933DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00AEE62720648D00933DDB /* Assets.xcassets */; };
 		AA00AEEA2720648D00933DDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA00AEE82720648D00933DDB /* LaunchScreen.storyboard */; };
 		AA00AEF22720656200933DDB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00AEF12720656200933DDB /* CustomTableViewCell.swift */; };
+		AA00AEF4272104DB00933DDB /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00AEF3272104DB00933DDB /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AA00AEE92720648D00933DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA00AEEB2720648D00933DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA00AEF12720656200933DDB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		AA00AEF3272104DB00933DDB /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				AA00AEE82720648D00933DDB /* LaunchScreen.storyboard */,
 				AA00AEEB2720648D00933DDB /* Info.plist */,
 				AA00AEF12720656200933DDB /* CustomTableViewCell.swift */,
+				AA00AEF3272104DB00933DDB /* CustomCollectionViewCell.swift */,
 			);
 			path = JjapAppleStore;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA00AEE22720648A00933DDB /* ViewController.swift in Sources */,
+				AA00AEF4272104DB00933DDB /* CustomCollectionViewCell.swift in Sources */,
 				AA00AEDE2720648A00933DDB /* AppDelegate.swift in Sources */,
 				AA00AEF22720656200933DDB /* CustomTableViewCell.swift in Sources */,
 				AA00AEE02720648A00933DDB /* SceneDelegate.swift in Sources */,
