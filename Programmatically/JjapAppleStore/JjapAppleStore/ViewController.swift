@@ -152,6 +152,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     private let lineOfSubLabel: [Int] = [1,2]
     
+    private let collectionView = UICollectionView().then {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.backgroundColor = .white
+        $0.collectionViewLayout = layout
+        $0.contentInset = UIEdgeInsets.init(top: 0, left: 107, bottom: 0, right: 0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
