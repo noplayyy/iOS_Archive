@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource {
 
     private let forYouLabel = UILabel().then {
         $0.text = "For You"
@@ -161,10 +161,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         $0.contentInset = UIEdgeInsets.init(top: 0, left: 107, bottom: 0, right: 0)
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as? CustomCollectionViewCell else {
+                   return UICollectionViewCell()
+            }
+        cell.backgroundColor = .clear
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         tableViewSetting()
+        collectionViewSetting()
         addView()
         location()
     }
@@ -178,6 +191,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.isScrollEnabled = false
         tableView.separatorStyle = .none
+    }
+    
+    private func collectionViewSetting(){
+        collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
 //MARK: - addView
