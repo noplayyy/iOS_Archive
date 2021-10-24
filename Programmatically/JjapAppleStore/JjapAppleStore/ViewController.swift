@@ -173,6 +173,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    private let imgsList: [String] = ["img5.png", "img6.png", "img7.png", "img8.png"]
+    
+    private let nameLabelList: [String] = ["몽키의 iPhone", "몽키의 Apple Watch", "몽키의 MacBook Pro", "몽키의 iPad"]
+    
+    private let deviceNameList: [String] = ["iPhone 13 mini", "Apple Watch SE", "MacBook Pro 16″", "iPad Pro"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
