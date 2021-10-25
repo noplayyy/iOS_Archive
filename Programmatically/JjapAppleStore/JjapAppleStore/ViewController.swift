@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate{
 
     private let forYouLabel = UILabel().then {
         $0.text = "For You"
@@ -162,7 +162,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return imgsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -170,6 +170,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                    return UICollectionViewCell()
             }
         cell.backgroundColor = .clear
+        cell.imgView.image = UIImage(named: imgsList[indexPath.row])
+        cell.nameLabel.text = nameLabelList[indexPath.row]
+        cell.phoneName.text = deviceNameList[indexPath.row]
         return cell
     }
     
@@ -227,6 +230,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view.addSubview(equipmentLabel)
         self.view.addSubview(learnMoreButton)
         self.view.addSubview(tableView)
+        view.addSubview(collectionView)
     }
     
 //MARK: - location
@@ -345,6 +349,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             make.width.equalToSuperview()
             make.left.equalToSuperview().offset(self.view.frame.width/14.42)
             make.top.equalTo(line1).offset(1)
+        }
+        
+        collectionView.snp.makeConstraints { make in
+            make.height.equalToSuperview().dividedBy(3.52)
+            make.width.equalToSuperview().dividedBy(1.44)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(learnMoreButton.snp.bottom).offset(self.view.frame.height/21.95)
         }
     }
 
