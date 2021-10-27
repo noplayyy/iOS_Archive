@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 class CustomCollectionViewCell: UICollectionViewCell {
     
@@ -42,9 +44,9 @@ class CustomCollectionViewCell: UICollectionViewCell {
     }
     
     override init(frame: CGRect) {
-            super.init(frame: frame)
-            configureUI()
-        }
+        super.init(frame: frame)
+        configureUI()
+    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -59,8 +61,8 @@ class CustomCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(shoppingButton)
         
         imgView.snp.makeConstraints { make in
-            make.width.equalToSuperview().offset(160)
-            make.height.equalToSuperview().offset(231)
+            make.width.equalToSuperview()
+            make.height.equalTo(frame.height/1.97)
             make.top.equalToSuperview()
             make.left.equalToSuperview()
         }

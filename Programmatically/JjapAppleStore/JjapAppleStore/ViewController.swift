@@ -128,20 +128,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.backgroundColor = .clear
         $0.collectionViewLayout = layout
-        $0.contentInset = UIEdgeInsets.init(top: 0, left: 17, bottom: 0, right: 0)
+        $0.contentInset = UIEdgeInsets.init(top: 0, left: 107, bottom: 0, right: 0)
+        $0.showsHorizontalScrollIndicator = false
     }
-        
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as? CustomCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         cell.imgView.image = UIImage(named: collectionViewImgList[indexPath.row])
         cell.titleLabel.text = collectionViewTitleLabelList[indexPath.row]
         cell.subLabel.text = collectionViewSubLabelList[indexPath.row]
             
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width/2.34, height: self.view.frame.height/3.52)
     }
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -345,10 +352,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             make.centerX.equalToSuperview()
             make.top.equalTo(line1.snp.bottom)
         }
+        
         collectionView.snp.makeConstraints { make in
             make.height.equalToSuperview().dividedBy(3.52)
-            make.width.equalTo((self.view.frame.width/2.34)*4)
-            make.left.equalToSuperview().offset(self.view.frame.width/3.5)
+            make.left.right.equalToSuperview()
             make.top.equalTo(equipmentLabel.snp.bottom).offset(self.view.frame.width/23.88)
         }
     }
