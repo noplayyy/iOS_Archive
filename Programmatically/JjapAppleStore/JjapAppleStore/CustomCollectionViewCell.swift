@@ -34,7 +34,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         $0.setTitleColor(UIColor(red: 0, green: 102/255, blue: 255, alpha: 1), for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 10)
         $0.backgroundColor = UIColor(red: 234/255, green: 234/255, blue: 234/255, alpha: 1)
-        $0.layer.cornerRadius = 20
+        $0.layer.cornerRadius = 10
     }
     
     var shoppingButton = UIButton().then {
@@ -44,9 +44,9 @@ class CustomCollectionViewCell: UICollectionViewCell {
     }
     
     override init(frame: CGRect) {
-        super.init(frame: frame)
-        configureUI()
-    }
+            super.init(frame: frame)
+            configureUI()
+        }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -61,32 +61,32 @@ class CustomCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(shoppingButton)
         
         imgView.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            make.height.equalTo(frame.height/1.97)
+            make.width.equalTo(160)
+            make.height.equalTo(117.33)
             make.top.equalToSuperview()
             make.left.equalToSuperview()
         }
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(imgView.snp.bottom).offset(14.67)
-            make.centerX.equalToSuperview()
+            make.centerX.equalTo(imgView)
         }
         
         subLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(6)
-            make.centerX.equalToSuperview()
+            make.centerX.equalTo(imgView)
         }
         
         informationButton.snp.makeConstraints { make in
-            make.width.equalToSuperview().dividedBy(4.81)
-            make.height.equalToSuperview().dividedBy(45.11)
+            make.width.equalTo(78)
+            make.height.equalTo(18)
             make.top.equalTo(subLabel.snp.bottom).offset(24)
-            make.centerX.equalToSuperview()
+            make.centerX.equalTo(imgView)
         }
         
         shoppingButton.snp.makeConstraints { make in
             make.top.equalTo(informationButton.snp.bottom).offset(14)
-            make.centerX.equalToSuperview()
+            make.centerX.equalTo(imgView)
         }
     }
     
