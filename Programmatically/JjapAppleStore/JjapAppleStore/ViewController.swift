@@ -202,7 +202,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: self.view.frame.width/3.50, bottom: 0, right: 0)
+//        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: self.view.frame.width/3.50, bottom: 0, right: 0)
+        collectionView.contentOffset = CGPoint(x: self.view.frame.width/3.50, y: 0)
     }
     
     
