@@ -14,6 +14,8 @@
 		AA4574F7272D6D910018411C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA4574F5272D6D910018411C /* Main.storyboard */; };
 		AA4574F9272D6D940018411C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA4574F8272D6D940018411C /* Assets.xcassets */; };
 		AA4574FC272D6D940018411C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA4574FA272D6D940018411C /* LaunchScreen.storyboard */; };
+		AA457504272D6E3C0018411C /* AuthCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA457503272D6E3C0018411C /* AuthCodeView.swift */; };
+		AA457506272D712A0018411C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA457505272D712A0018411C /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		AA4574F8272D6D940018411C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA4574FB272D6D940018411C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA4574FD272D6D940018411C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA457503272D6E3C0018411C /* AuthCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeView.swift; sourceTree = "<group>"; };
+		AA457505272D712A0018411C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F86890681A75804663CC6787 /* Pods-AuthCodeTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthCodeTextField.debug.xcconfig"; path = "Target Support Files/Pods-AuthCodeTextField/Pods-AuthCodeTextField.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +60,6 @@
 				F86890681A75804663CC6787 /* Pods-AuthCodeTextField.debug.xcconfig */,
 				138638FC29E495FF6DDE4460 /* Pods-AuthCodeTextField.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +91,8 @@
 				AA4574F8272D6D940018411C /* Assets.xcassets */,
 				AA4574FA272D6D940018411C /* LaunchScreen.storyboard */,
 				AA4574FD272D6D940018411C /* Info.plist */,
+				AA457503272D6E3C0018411C /* AuthCodeView.swift */,
+				AA457505272D712A0018411C /* Extension.swift */,
 			);
 			path = AuthCodeTextField;
 			sourceTree = "<group>";
@@ -207,7 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA457506272D712A0018411C /* Extension.swift in Sources */,
 				AA4574F4272D6D910018411C /* ViewController.swift in Sources */,
+				AA457504272D6E3C0018411C /* AuthCodeView.swift in Sources */,
 				AA4574F0272D6D910018411C /* AppDelegate.swift in Sources */,
 				AA4574F2272D6D910018411C /* SceneDelegate.swift in Sources */,
 			);
