@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B6E2D6B04B9BE27C0046315 /* Pods_AuthCodeTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874A36F33D9F536AF1E38183 /* Pods_AuthCodeTextField.framework */; };
 		AA4574F0272D6D910018411C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4574EF272D6D910018411C /* AppDelegate.swift */; };
 		AA4574F2272D6D910018411C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4574F1272D6D910018411C /* SceneDelegate.swift */; };
 		AA4574F4272D6D910018411C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4574F3272D6D910018411C /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		138638FC29E495FF6DDE4460 /* Pods-AuthCodeTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthCodeTextField.release.xcconfig"; path = "Target Support Files/Pods-AuthCodeTextField/Pods-AuthCodeTextField.release.xcconfig"; sourceTree = "<group>"; };
+		874A36F33D9F536AF1E38183 /* Pods_AuthCodeTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthCodeTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4574EC272D6D910018411C /* AuthCodeTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthCodeTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4574EF272D6D910018411C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA4574F1272D6D910018411C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		AA4574F8272D6D940018411C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA4574FB272D6D940018411C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA4574FD272D6D940018411C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F86890681A75804663CC6787 /* Pods-AuthCodeTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthCodeTextField.debug.xcconfig"; path = "Target Support Files/Pods-AuthCodeTextField/Pods-AuthCodeTextField.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6E2D6B04B9BE27C0046315 /* Pods_AuthCodeTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		674595B75F0BEE14E1FC2FFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				874A36F33D9F536AF1E38183 /* Pods_AuthCodeTextField.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85EAF1B8FA6F5D97668366D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F86890681A75804663CC6787 /* Pods-AuthCodeTextField.debug.xcconfig */,
+				138638FC29E495FF6DDE4460 /* Pods-AuthCodeTextField.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AA4574E3272D6D910018411C = {
 			isa = PBXGroup;
 			children = (
 				AA4574EE272D6D910018411C /* AuthCodeTextField */,
 				AA4574ED272D6D910018411C /* Products */,
+				85EAF1B8FA6F5D97668366D6 /* Pods */,
+				674595B75F0BEE14E1FC2FFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA457500272D6D940018411C /* Build configuration list for PBXNativeTarget "AuthCodeTextField" */;
 			buildPhases = (
+				05B04016043A564C3BC62946 /* [CP] Check Pods Manifest.lock */,
 				AA4574E8272D6D910018411C /* Sources */,
 				AA4574E9272D6D910018411C /* Frameworks */,
 				AA4574EA272D6D910018411C /* Resources */,
+				4508905ADBF12B3B44737E58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05B04016043A564C3BC62946 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AuthCodeTextField-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4508905ADBF12B3B44737E58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthCodeTextField/Pods-AuthCodeTextField-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthCodeTextField/Pods-AuthCodeTextField-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AuthCodeTextField/Pods-AuthCodeTextField-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA4574E8272D6D910018411C /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		AA457501272D6D940018411C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F86890681A75804663CC6787 /* Pods-AuthCodeTextField.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		AA457502272D6D940018411C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 138638FC29E495FF6DDE4460 /* Pods-AuthCodeTextField.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
