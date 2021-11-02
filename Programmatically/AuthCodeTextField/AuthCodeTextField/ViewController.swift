@@ -11,6 +11,7 @@ import Then
 
 class ViewController: UIViewController {
     //MARK: - Properties
+    private let authCodeView = AuthCodeView()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
     // MARK: - Add View
     
     private func addView(){
-        
+        view.addSubview(authCodeView)
     }
     
     // MARK: - Corner Radius
@@ -43,7 +44,12 @@ class ViewController: UIViewController {
     // MARK: - Location
     
     private func location(){
-        
+        authCodeView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(self.view.frame.height/2.9)
+            make.width.equalToSuperview().dividedBy(1.79)
+            make.height.equalToSuperview().dividedBy(10.98)
+        }
     }
     
 }
