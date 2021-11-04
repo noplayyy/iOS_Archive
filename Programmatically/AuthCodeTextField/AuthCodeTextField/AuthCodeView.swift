@@ -49,6 +49,13 @@ class AuthCodeView: UIView {
         $0.textAlignment = .center
     }
     
+    private let tfStack = UIStackView().then {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.axis = .horizontal
+        $0.spacing = 15
+        $0.distribution = .fillEqually
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
