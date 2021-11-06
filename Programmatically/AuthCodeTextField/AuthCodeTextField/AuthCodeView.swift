@@ -93,7 +93,7 @@ class AuthCodeView: UIView {
         }
 
         tf3.snp.makeConstraints { make in
-            make.left.equalTo(tf2.snp.right).offset(16)
+            make.right.equalTo(tf4.snp.left).offset(-16)
             make.bottom.equalToSuperview()
             make.width.equalTo(tf2)
             make.height.equalTo(tf2)
