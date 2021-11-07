@@ -19,6 +19,39 @@ class ViewController: UIViewController {
         configureUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        authCodeView.tf1.becomeFirstResponder()
+    }
+    
+    @objc
+    func textDidChange(textfield: UITextField) {
+        let text = textfield.text
+        
+        if text?.utf16.count == 1{
+            switch textfield {
+                
+            case authCodeView.tf1:
+                authCodeView.tf2.becomeFirstResponder()
+                break
+                
+            case authCodeView.tf2:
+                authCodeView.tf3.becomeFirstResponder()
+                break
+                
+            case authCodeView.tf3:
+                authCodeView.tf4.becomeFirstResponder()
+                break
+                
+            default:
+                break
+                
+            }
+        } else {
+            
+        }
+    }
+    
     //MARK: - Selectors
     
     //MARK: - Helpers
@@ -27,6 +60,11 @@ class ViewController: UIViewController {
         addView()
         cornerRadius()
         location()
+        
+        authCodeView.tf1.addTarget(self, action: #selector(self.textDidChange(textfield:)), for: UIControl.Event.editingChanged)
+        authCodeView.tf2.addTarget(self, action: #selector(self.textDidChange(textfield:)), for: UIControl.Event.editingChanged)
+        authCodeView.tf3.addTarget(self, action: #selector(self.textDidChange(textfield:)), for: UIControl.Event.editingChanged)
+        authCodeView.tf4.addTarget(self, action: #selector(self.textDidChange(textfield:)), for: UIControl.Event.editingChanged)
     }
     
     // MARK: - Add View
