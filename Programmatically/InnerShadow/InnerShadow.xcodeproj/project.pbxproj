@@ -13,9 +13,12 @@
 		AA5803CA279473B5005CB409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5803C8279473B5005CB409 /* Main.storyboard */; };
 		AA5803CC279473B8005CB409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5803CB279473B8005CB409 /* Assets.xcassets */; };
 		AA5803CF279473B8005CB409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5803CD279473B8005CB409 /* LaunchScreen.storyboard */; };
+		B838ED2BB140B21E3456AF1F /* Pods_InnerShadow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6FE5AEA3D2D166B94332EF /* Pods_InnerShadow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C6FE5AEA3D2D166B94332EF /* Pods_InnerShadow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InnerShadow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		582DC1B94B1C3932472C58D0 /* Pods-InnerShadow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InnerShadow.release.xcconfig"; path = "Target Support Files/Pods-InnerShadow/Pods-InnerShadow.release.xcconfig"; sourceTree = "<group>"; };
 		AA5803BF279473B5005CB409 /* InnerShadow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnerShadow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5803C2279473B5005CB409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA5803C4279473B5005CB409 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		AA5803CB279473B8005CB409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA5803CE279473B8005CB409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA5803D0279473B8005CB409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABBAB3A417C28C8607643E57 /* Pods-InnerShadow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InnerShadow.debug.xcconfig"; path = "Target Support Files/Pods-InnerShadow/Pods-InnerShadow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B838ED2BB140B21E3456AF1F /* Pods_InnerShadow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A99C48AD2437A10CAAD66F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C6FE5AEA3D2D166B94332EF /* Pods_InnerShadow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A98A54AE3FB8851B6F307676 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABBAB3A417C28C8607643E57 /* Pods-InnerShadow.debug.xcconfig */,
+				582DC1B94B1C3932472C58D0 /* Pods-InnerShadow.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AA5803B6279473B5005CB409 = {
 			isa = PBXGroup;
 			children = (
 				AA5803C1279473B5005CB409 /* InnerShadow */,
 				AA5803C0279473B5005CB409 /* Products */,
+				A98A54AE3FB8851B6F307676 /* Pods */,
+				9A99C48AD2437A10CAAD66F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5803D3279473B8005CB409 /* Build configuration list for PBXNativeTarget "InnerShadow" */;
 			buildPhases = (
+				C468B7908383CABE44A5ED79 /* [CP] Check Pods Manifest.lock */,
 				AA5803BB279473B5005CB409 /* Sources */,
 				AA5803BC279473B5005CB409 /* Frameworks */,
 				AA5803BD279473B5005CB409 /* Resources */,
+				03526F58D6A2B1F341B5A69B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03526F58D6A2B1F341B5A69B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InnerShadow/Pods-InnerShadow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InnerShadow/Pods-InnerShadow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InnerShadow/Pods-InnerShadow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C468B7908383CABE44A5ED79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InnerShadow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA5803BB279473B5005CB409 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		AA5803D4279473B8005CB409 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABBAB3A417C28C8607643E57 /* Pods-InnerShadow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		AA5803D5279473B8005CB409 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 582DC1B94B1C3932472C58D0 /* Pods-InnerShadow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
